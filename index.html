@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <button class="theme-toggle" onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
+
+        <div class="task-input">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+
+        <div class="task-counter">
+            <p>To Do: <span id="todoCount">0</span></p>
+            <p>Completed: <span id="completedCount">0</span></p>
+        </div>
+
+        <div class="task-board">
+            <div class="task-column">
+                <h2>To Do</h2>
+                <div id="todo" class="task-list" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+            </div>
+
+            <div class="task-column">
+                <h2>Completed</h2>
+                <div id="completed" class="task-list" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+/* Main Container */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode .container {
+    background: #333;
+}
+
+/* Toggle Button */
+.theme-toggle {
+    padding: 10px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Added space below the toggle button */
+    font-size: 16px;
+}
+
+.theme-toggle:hover {
+    background: #0056b3;
+}
+
+/* Task Input Section */
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input input,
+.task-input select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-input button {
+    padding: 8px 15px;
+    border: none;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.task-input button:hover {
+    background: #218838;
+}
+
+/* Task Counter */
+.task-counter {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Task Board */
+.task-board {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.task-column {
+    flex: 1;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Fix for Dark Mode - Ensure Titles are Visible */
+.task-column h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.dark-mode .task-column {
+    background: #444;
+}
+
+.dark-mode .task-column h2 {
+    color: #f4f4f4; /* Fixes the invisible text issue */
+}
+
+/* Task Lists */
+.task-list {
+    min-height: 150px;
+    padding: 10px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.dark-mode .task-list {
+    background: #555;
+    border-color: #777;
+}
+
+/* Tasks */
+.task {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    cursor: grab;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.task:hover {
+    transform: scale(1.05);
+}
+
+/* Task Priority Colors */
+.task.low {
+    background: #28a745;
+}
+
+.task.medium {
+    background: #ffc107;
+    color: #333;
+}
+
+.task.high {
+    background: #dc3545;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Dragging Effect */
+.task.dragging {
+    opacity: 0.5;
+    border: 2px dashed black;
+}
